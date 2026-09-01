@@ -2,8 +2,8 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "ProcessWebsite",
     "description": "",
-    "home_page_url": "https://processgamess.github.io/processwebsite",
-    "feed_url": "https://processgamess.github.io/processwebsite/feed.json",
+    "home_page_url": "https://processgames.org",
+    "feed_url": "https://processgames.org/feed.json",
     "user_comment": "",
     "author": {
         "name": "Process"
