@@ -3,10 +3,30 @@
     <title>ProcessWebsite</title>
     <link href="https://www.processgames.org/feed.xml" rel="self" />
     <link href="https://www.processgames.org" />
-    <updated>1970-01-01T02:00:00+02:00</updated>
+    <updated>2026-09-02T14:24:22+03:00</updated>
     <author>
         <name>Process</name>
     </author>
     <id>https://www.processgames.org</id>
 
+    <entry>
+        <title>Blackjack Wars</title>
+        <author>
+            <name>Process</name>
+        </author>
+        <link href="https://www.processgames.org/blackjack-wars.html"/>
+        <id>https://www.processgames.org/blackjack-wars.html</id>
+
+        <updated>2026-09-02T14:24:22+03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    adfhash
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <figure class="post__image"><img loading="lazy"  src="https://www.processgames.org/media/posts/3/OzellikGrafigi-2.jpg" alt="" width="450" height="220" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://www.processgames.org/media/posts/3/responsive/OzellikGrafigi-2-xs.jpg 640w ,https://www.processgames.org/media/posts/3/responsive/OzellikGrafigi-2-sm.jpg 768w ,https://www.processgames.org/media/posts/3/responsive/OzellikGrafigi-2-md.jpg 1024w ,https://www.processgames.org/media/posts/3/responsive/OzellikGrafigi-2-lg.jpg 1366w ,https://www.processgames.org/media/posts/3/responsive/OzellikGrafigi-2-xl.jpg 1600w ,https://www.processgames.org/media/posts/3/responsive/OzellikGrafigi-2-2xl.jpg 1920w"></figure><a target="_blank" rel="noopener noreferrer">adfhash</a></p>
+            ]]>
+        </content>
+    </entry>
 </feed>
