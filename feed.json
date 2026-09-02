@@ -5,6 +5,7 @@
     "home_page_url": "https://www.processgames.org",
     "feed_url": "https://www.processgames.org/feed.json",
     "user_comment": "",
+    "icon": "https://www.processgames.org/media/website/SmallLogo.png",
     "author": {
         "name": "Process"
     },
