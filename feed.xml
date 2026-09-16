@@ -3,7 +3,7 @@
     <title>ProcessWebsite</title>
     <link href="https://www.processgames.org/feed.xml" rel="self" />
     <link href="https://www.processgames.org" />
-    <updated>2026-09-03T22:17:19+03:00</updated>
+    <updated>2026-09-16T20:52:32+03:00</updated>
     <author>
         <name>Process</name>
     </author>
@@ -159,7 +159,7 @@
             <summary type="html">
                 <![CDATA[
                         <img src="https://www.processgames.org/media/posts/3/OzellikGrafigi.jpg" alt="" />
-                    Blackjack Wars STEAM PLAYSTORE
+                    Blackjack Wars STEAM PLAYSTORE APPSTORE
                 ]]>
             </summary>
         <content type="html">
@@ -173,10 +173,12 @@
 <p style="margin-top: 0;"><strong><span style="color: #000000; font-size: 32px;">Blackjack Wars</span></strong></p>
 <p style="margin: 10px 0;"><a href="https://store.steampowered.com/app/3694020/Blackjack_Wars/" style="display: block; background-color: #000000; color: #ffffff; text-align: center; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 24px; width: 100%; box-sizing: border-box;">STEAM</a></p>
 <p style="margin: 10px 0;"><a href="https://play.google.com/store/apps/details?id=com.processgames.blackjackwars&amp;hl=en" style="display: block; background-color: #000000; color: #ffffff; text-align: center; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 24px; width: 100%; box-sizing: border-box;">PLAYSTORE</a></p>
+<p style="margin: 10px 0;"><a href="https://apps.apple.com/jo/app/blackjack-wars/id6802057796" style="display: block; background-color: #000000; color: #ffffff; text-align: center; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 24px; width: 100%; box-sizing: border-box;">APPSTORE</a></p>
 </td>
 </tr>
 </tbody>
 </table>
+<p> </p>
             ]]>
         </content>
     </entry>
