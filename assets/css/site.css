@@ -158,6 +158,8 @@ a {
 
 .stores {
   display: grid;
+  grid-template-columns: min(220px, 100%);
+  justify-content: center;
   gap: 10px;
   margin-top: auto;
 }
@@ -310,7 +312,7 @@ a {
   }
 
   .game-page .stores {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, 220px);
   }
 
   .site-nav {
