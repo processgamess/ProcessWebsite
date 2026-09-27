@@ -327,30 +327,10 @@ a {
 
 .showcase {
   background: #000000;
-  color: #ffffff;
 }
 
 .showcase .games {
   padding-top: 48px;
-}
-
-.showcase .game {
-  background: #111111;
-  border-color: #262626;
-}
-
-.showcase .game__image {
-  background: #1a1a1a;
-}
-
-.showcase .btn {
-  background: #ffffff;
-  color: #000000;
-}
-
-.showcase .btn:hover,
-.showcase .btn:focus-visible {
-  background: #d9d9d9;
 }
 
 .home .site-footer {
