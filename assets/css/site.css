@@ -333,12 +333,6 @@ a {
   padding-top: 48px;
 }
 
-.home .site-footer {
-  background: #000000;
-  border-top-color: #262626;
-  color: #a3a3a3;
-}
-
 /* Gameplay video that fades in over the game image (see site.js) */
 
 .media {
