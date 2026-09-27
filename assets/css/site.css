@@ -319,21 +319,24 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  container-type: inline-size;
 }
 
 .stores--split .btn {
   flex: 0 1 calc(50% - 5px);
   max-width: 220px;
   min-width: 0;
+  white-space: nowrap;
 }
 
-@media (max-width: 400px) {
+/* Keep labels on one line (same height as other buttons) when two
+   buttons share a narrow card */
+@container (max-width: 440px) {
   .stores--split .btn {
     gap: 6px;
     padding: 10px 8px;
     font-size: 13px;
     letter-spacing: .02em;
-    white-space: nowrap;
   }
 
   .stores--split .btn__icon {
@@ -342,7 +345,7 @@ a {
   }
 }
 
-@media (max-width: 350px) {
+@container (max-width: 300px) {
   .stores--split .btn__icon {
     display: none;
   }
