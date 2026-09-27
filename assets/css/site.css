@@ -313,6 +313,41 @@ a {
   display: inline-flex;
 }
 
+/* Three or more store buttons: two per row, a leftover one centered below */
+
+.stores--split {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stores--split .btn {
+  flex: 0 1 calc(50% - 5px);
+  max-width: 220px;
+  min-width: 0;
+}
+
+@media (max-width: 400px) {
+  .stores--split .btn {
+    gap: 6px;
+    padding: 10px 8px;
+    font-size: 13px;
+    letter-spacing: .02em;
+    white-space: nowrap;
+  }
+
+  .stores--split .btn__icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 350px) {
+  .stores--split .btn__icon {
+    display: none;
+  }
+}
+
 .btn:hover,
 .btn:focus-visible {
   background: var(--btn-hover);
