@@ -323,6 +323,29 @@ a {
   outline-offset: 2px;
 }
 
+/* Gameplay video that fades in over the game image (see site.js) */
+
+.media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.media__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .8s ease;
+  pointer-events: none;
+}
+
+.media__video.is-playing {
+  opacity: 1;
+}
+
 /* Single game page */
 
 .game-page {
@@ -336,7 +359,7 @@ a {
   margin-bottom: 20px;
 }
 
-.game-page .game__image {
+.game-page .media {
   border-radius: var(--radius);
 }
 
