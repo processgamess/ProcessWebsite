@@ -21,8 +21,11 @@
     cards.forEach(function (el) { revealObserver.observe(el); });
   }
 
-  // Gameplay videos: start after the image has been visible for VIDEO_DELAY,
-  // pause when scrolled away. Skipped for reduced motion and data saver.
+  // Gameplay videos: once the image has been fully on screen for VIDEO_DELAY,
+  // a clip fades in over it. As soon as it is no longer fully visible the
+  // clip pauses and the image shows again; when it is fully back on screen
+  // the clip resumes where it stopped. Skipped for reduced motion and data
+  // saver.
   var VIDEO_DELAY = 2000;
   var saveData = navigator.connection && navigator.connection.saveData;
   var frames = document.querySelectorAll('[data-video]');
@@ -30,7 +33,8 @@
     var videoObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         var frame = entry.target;
-        if (entry.isIntersecting) {
+        frame._visible = isFullyVisible(entry);
+        if (frame._visible) {
           if (frame._video) {
             playVideo(frame);
           } else if (!frame._timer) {
@@ -39,11 +43,23 @@
         } else {
           clearTimeout(frame._timer);
           frame._timer = null;
-          if (frame._video) frame._video.pause();
+          if (frame._video) {
+            frame._video.pause();
+            frame._video.classList.remove('is-playing');
+          }
         }
       });
-    }, { threshold: 0.6 });
+    }, { threshold: [0, 0.5, 0.9, 0.95, 0.99, 1] });
     frames.forEach(function (el) { videoObserver.observe(el); });
+  }
+
+  // "Fully visible" allows for sub-pixel rounding, and also counts an image
+  // taller than the viewport (e.g. a phone in landscape) once it fills it.
+  function isFullyVisible(entry) {
+    if (!entry.isIntersecting) return false;
+    if (entry.intersectionRatio >= 0.99) return true;
+    var root = entry.rootBounds;
+    return !!root && entry.intersectionRect.height >= root.height - 2;
   }
 
   function startVideo(frame) {
@@ -67,7 +83,12 @@
       video.appendChild(source);
     });
     video.addEventListener('playing', function () {
-      video.classList.add('is-playing');
+      // Playback can start after the frame has already scrolled out of view.
+      if (frame._visible) {
+        video.classList.add('is-playing');
+      } else {
+        video.pause();
+      }
     });
     frame._video = video;
     frame.appendChild(video);
