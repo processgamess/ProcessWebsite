@@ -26,7 +26,7 @@
   // clip pauses and the image shows again; when it is fully back on screen
   // the clip resumes where it stopped. Skipped for reduced motion and data
   // saver.
-  var VIDEO_DELAY = 2000;
+  var VIDEO_DELAY = 1000;
   var saveData = navigator.connection && navigator.connection.saveData;
   var frames = document.querySelectorAll('[data-video]');
   if (!reduceMotion && !saveData && canObserve && frames.length) {
