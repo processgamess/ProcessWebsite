@@ -25,6 +25,12 @@ html {
   text-size-adjust: 100%;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -93,17 +99,131 @@ a {
   text-underline-offset: 4px;
 }
 
-/* Home banner: the source image is a very wide canvas with the logo in the
-   middle, so crop the empty sides instead of shrinking the logo. */
+/* Home intro: full-screen animated logo that fades out on scroll */
 
-.banner {
-  margin: 16px 0;
+.intro {
+  --header-h: 65px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - var(--header-h));
+  height: calc(100svh - var(--header-h));
+  min-height: 420px;
+  overflow: hidden;
 }
 
-.banner img {
-  width: 100%;
-  height: clamp(140px, 25vw, 260px);
-  object-fit: cover;
+.intro__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(16px, 4vh, 40px);
+  margin: 0;
+  /* --p (0..1) is set from scroll position by site.js */
+  opacity: calc(1 - var(--p, 0) * 1.25);
+  transform: translateY(calc(var(--p, 0) * -8vh)) scale(calc(1 - var(--p, 0) * .25));
+  will-change: opacity, transform;
+}
+
+.intro__mark {
+  width: min(48vw, 34vh, 300px);
+  animation: mark-in 1.1s cubic-bezier(.2, .8, .2, 1) both,
+    mark-float 5s ease-in-out 1.2s infinite;
+}
+
+.intro__word {
+  width: min(56vw, 38vh, 340px);
+  animation: word-in .8s cubic-bezier(.2, .8, .2, 1) .55s both;
+}
+
+.intro__scroll {
+  position: absolute;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-left: -24px;
+  color: var(--text);
+  opacity: calc(1 - var(--p, 0) * 4);
+  animation: fade-in .6s ease 1.4s both;
+}
+
+.intro__scroll svg {
+  width: 28px;
+  height: 28px;
+  animation: nudge 1.8s ease-in-out 2s infinite;
+}
+
+@keyframes mark-in {
+  from {
+    opacity: 0;
+    transform: rotate(-120deg) scale(.3);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes mark-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes word-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* Cards rise in as they scroll into view (only when JS is running) */
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .6s ease, transform .6s cubic-bezier(.2, .8, .2, 1);
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro__logo {
+    opacity: 1;
+    transform: none;
+  }
+
+  .intro__mark,
+  .intro__word,
+  .intro__scroll,
+  .intro__scroll svg {
+    animation: none;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Game cards */
@@ -299,8 +419,8 @@ a {
     gap: 32px;
   }
 
-  .banner img {
-    object-fit: contain;
+  .js .games > .reveal:nth-child(even) {
+    transition-delay: .12s;
   }
 
   .game__body {
