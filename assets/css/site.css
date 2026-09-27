@@ -323,6 +323,22 @@ a {
   outline-offset: 2px;
 }
 
+/* Home: everything below the intro logo sits on black */
+
+.showcase {
+  background: #000000;
+}
+
+.showcase .games {
+  padding-top: 48px;
+}
+
+.home .site-footer {
+  background: #000000;
+  border-top-color: #262626;
+  color: #a3a3a3;
+}
+
 /* Gameplay video that fades in over the game image (see site.js) */
 
 .media {
