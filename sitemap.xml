@@ -1,87 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://www.processgames.org/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url>
-<loc>https://www.processgames.org/</loc>
-</url>
-<url>
-<loc>https://www.processgames.org/blackjack-wars/</loc>
-<lastmod>2026-09-16T20:52:32+03:00</lastmod>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/3/OzellikGrafigi.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/3/OzellikGrafigi-3.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://www.processgames.org/blackjack-wars-3/</loc>
-<lastmod>2026-09-03T22:06:03+03:00</lastmod>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/5/OzellikGrafigi.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/5/MainCapsule-2.png</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://www.processgames.org/blackjack-wars-4/</loc>
-<lastmod>2026-09-03T10:25:14+03:00</lastmod>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/6/OzellikGrafigi.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/6/1.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://www.processgames.org/blackjack-wars-5/</loc>
-<lastmod>2026-09-03T22:12:05+03:00</lastmod>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/7/OzellikGrafigi.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/7/5-2.png</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://www.processgames.org/blackjack-wars-6/</loc>
-<lastmod>2026-09-03T22:14:26+03:00</lastmod>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/8/OzellikGrafigi.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/8/OzellikGrafigi.png</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://www.processgames.org/blackjack-wars-7/</loc>
-<lastmod>2026-09-03T22:17:19+03:00</lastmod>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/9/OzellikGrafigi.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://www.processgames.org/media/posts/9/LandScape.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-</url>
-<url>
-<loc>https://www.processgames.org/privacypolicy/</loc>
-<lastmod>2026-09-02T14:25:08+03:00</lastmod>
-</url>
-<url>
-<loc>https://www.processgames.org/terms-of-service/</loc>
-<lastmod>2026-09-02T15:17:18+03:00</lastmod>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.processgames.org/</loc>
+  </url>
+  <url>
+    <loc>https://www.processgames.org/blackjack-wars-7/</loc>
+    <lastmod>2026-09-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.processgames.org/blackjack-wars-6/</loc>
+    <lastmod>2026-09-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.processgames.org/blackjack-wars-5/</loc>
+    <lastmod>2026-09-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.processgames.org/blackjack-wars-3/</loc>
+    <lastmod>2026-09-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.processgames.org/blackjack-wars/</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://www.processgames.org/blackjack-wars-4/</loc>
+    <lastmod>2026-09-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.processgames.org/privacypolicy/</loc>
+    <lastmod>2026-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.processgames.org/terms-of-service/</loc>
+    <lastmod>2026-09-02</lastmod>
+  </url>
 </urlset>
