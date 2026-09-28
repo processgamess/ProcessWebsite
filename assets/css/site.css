@@ -142,10 +142,6 @@ a {
   animation: word-in .8s cubic-bezier(.2, .8, .2, 1) .95s both;
 }
 
-.intro__count {
-  font-variant-numeric: tabular-nums;
-}
-
 .intro__mark {
   width: min(48vw, 34vh, 300px);
   animation: mark-in 1.1s cubic-bezier(.2, .8, .2, 1) both,

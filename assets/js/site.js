@@ -105,26 +105,6 @@
   var intro = document.querySelector('.intro');
   if (!intro || reduceMotion) return;
 
-  // Count the download stat up from 0 as it fades in (the HTML already
-  // holds the final number, so it reads correctly without JS).
-  var count = intro.querySelector('[data-count]');
-  if (count) {
-    var target = parseInt(count.getAttribute('data-count'), 10);
-    var COUNT_START = 950, COUNT_DURATION = 1400;
-    count.textContent = '0';
-    setTimeout(function () {
-      var start = null;
-      function step(now) {
-        if (start === null) start = now;
-        var t = Math.min((now - start) / COUNT_DURATION, 1);
-        var eased = 1 - Math.pow(1 - t, 3);
-        count.textContent = String(Math.round(target * eased));
-        if (t < 1) window.requestAnimationFrame(step);
-      }
-      window.requestAnimationFrame(step);
-    }, COUNT_START);
-  }
-
   var ticking = false;
   function update() {
     ticking = false;
