@@ -335,6 +335,44 @@ a {
   display: inline-flex;
 }
 
+/* Three or more store buttons: two per row, a leftover one centered below */
+
+.stores--split {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  container-type: inline-size;
+}
+
+.stores--split .btn {
+  flex: 0 1 calc(50% - 5px);
+  max-width: 220px;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+/* Keep labels on one line (same height as other buttons) when two
+   buttons share a narrow card */
+@container (max-width: 440px) {
+  .stores--split .btn {
+    gap: 6px;
+    padding: 10px 8px;
+    font-size: 13px;
+    letter-spacing: .02em;
+  }
+
+  .stores--split .btn__icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@container (max-width: 300px) {
+  .stores--split .btn__icon {
+    display: none;
+  }
+}
+
 .btn:hover,
 .btn:focus-visible {
   background: var(--btn-hover);
@@ -343,6 +381,16 @@ a {
 .btn:focus-visible {
   outline: 3px solid #6aa0ff;
   outline-offset: 2px;
+}
+
+/* Home: everything below the intro logo sits on black */
+
+.showcase {
+  background: #000000;
+}
+
+.showcase .games {
+  padding-top: 48px;
 }
 
 /* Gameplay video that fades in over the game image (see site.js) */
