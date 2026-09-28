@@ -215,8 +215,26 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .intro__logo,
-  /* Game cards */
+  .intro__logo {
+    opacity: 1;
+    transform: none;
+  }
+
+  .intro__mark,
+  .intro__word,
+  .intro__scroll,
+  .intro__scroll svg {
+    animation: none;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Game cards */
 
 .games {
   display: grid;
