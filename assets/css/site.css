@@ -519,3 +519,16 @@ a {
     gap: 24px;
   }
 }
+
+.site-footer__contact {
+  flex-basis: 100%;
+}
+
+.site-footer__contact a {
+  color: var(--muted);
+  text-decoration: underline;
+}
+
+.site-footer__contact a:hover {
+  color: var(--text);
+}
