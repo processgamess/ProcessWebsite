@@ -520,15 +520,21 @@ a {
   }
 }
 
-.site-footer__contact {
-  flex-basis: 100%;
+.site-footer nav {
+  align-items: center;
 }
 
-.site-footer__contact a {
+.site-footer__mail {
+  display: inline-flex;
   color: var(--muted);
-  text-decoration: underline;
+  line-height: 0;
 }
 
-.site-footer__contact a:hover {
+.site-footer__mail svg {
+  width: 18px;
+  height: 18px;
+}
+
+.site-footer__mail:hover {
   color: var(--text);
 }
