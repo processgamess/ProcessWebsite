@@ -137,7 +137,7 @@ a {
   position: relative;
   display: block;
   width: min(48vw, 34vh, 300px);
-  animation: mark-float 5s ease-in-out 2.4s infinite;
+  animation: mark-float 5s ease-in-out 2.6s infinite;
 }
 
 .intro__mark img {
@@ -151,12 +151,12 @@ a {
   position: absolute;
   inset: 0;
   transform-origin: 50% 50%;
-  animation: cover-close 1.8s cubic-bezier(.55, 0, .25, 1) .3s both;
+  animation: cover-close 2.4s cubic-bezier(.55, .06, .68, .19) both;
 }
 
 .intro__word {
   width: min(56vw, 38vh, 340px);
-  animation: word-in .8s cubic-bezier(.2, .8, .2, 1) 1.6s both;
+  animation: word-in .8s cubic-bezier(.2, .8, .2, 1) 2s both;
 }
 
 .intro__scroll {
@@ -171,7 +171,7 @@ a {
   margin-left: -24px;
   color: var(--text);
   opacity: calc(1 - var(--p, 0) * 4);
-  animation: fade-in .6s ease 2.4s both;
+  animation: fade-in .6s ease 2.6s both;
 }
 
 .intro__scroll svg {
