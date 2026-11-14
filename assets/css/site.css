@@ -151,7 +151,7 @@ a {
   position: absolute;
   inset: 0;
   transform-origin: 50% 50%;
-  animation: cover-close 2.4s cubic-bezier(.55, .06, .68, .19) both;
+  animation: cover-close 2.4s cubic-bezier(.2, .12, .7, .4) both;
 }
 
 .intro__word {
