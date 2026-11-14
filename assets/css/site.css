@@ -137,7 +137,7 @@ a {
   position: relative;
   display: block;
   width: min(48vw, 34vh, 300px);
-  animation: mark-float 5s ease-in-out 2.2s infinite;
+  animation: mark-float 5s ease-in-out 1.75s infinite;
 }
 
 .intro__mark img {
@@ -152,13 +152,13 @@ a {
   inset: 0;
   transform-origin: 50% 50%;
   /* cover-fade starts once the diamond has shrunk inside the logo's centre hole */
-  animation: cover-close 2s cubic-bezier(.2, .12, .7, .4) both,
-    cover-fade .49s linear 1.51s both;
+  animation: cover-close 1.6s cubic-bezier(.2, .12, .7, .4) both,
+    cover-fade .39s linear 1.21s both;
 }
 
 .intro__word {
   width: min(56vw, 38vh, 340px);
-  animation: word-in .8s cubic-bezier(.2, .8, .2, 1) 1.7s both;
+  animation: word-in .8s cubic-bezier(.2, .8, .2, 1) 1.35s both;
 }
 
 .intro__scroll {
@@ -173,7 +173,7 @@ a {
   margin-left: -24px;
   color: var(--text);
   opacity: calc(1 - var(--p, 0) * 4);
-  animation: fade-in .6s ease 2.2s both;
+  animation: fade-in .6s ease 1.75s both;
 }
 
 .intro__scroll svg {
