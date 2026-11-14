@@ -151,7 +151,9 @@ a {
   position: absolute;
   inset: 0;
   transform-origin: 50% 50%;
-  animation: cover-close 1.25s cubic-bezier(.2, .12, .7, .4) both;
+  /* cover-fade starts once the diamond has shrunk inside the logo's centre hole */
+  animation: cover-close 1.25s cubic-bezier(.2, .12, .7, .4) both,
+    cover-fade .31s linear .94s both;
 }
 
 .intro__word {
@@ -183,6 +185,10 @@ a {
 @keyframes cover-close {
   from { transform: scale(1.01); }
   to { transform: scale(0); }
+}
+
+@keyframes cover-fade {
+  to { opacity: 0; }
 }
 
 @keyframes mark-float {
